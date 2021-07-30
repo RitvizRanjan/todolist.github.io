@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <link rel="stylesheet" href="App.css">
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.7.1/firebase-firestore.js"></script>
+</head>
+
+<body>
+    <h1>To Do List</h1>
+    <div class="content">
+        <form id="add-task">
+            <input type="text" name="name" placeholder="work">
+            <button>add button</button>
+        </form>
+        <ul id="To-Do-List"></ul>
+    </div>
+    <script>
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        var firebaseConfig = {
+            apiKey: "AIzaSyB9KqfSRyjWDITxvqG_fY0_Uv_-wPD-Bg8",
+            authDomain: "todo-c9f35.firebaseapp.com",
+            projectId: "todo-c9f35",
+            storageBucket: "todo-c9f35.appspot.com",
+            messagingSenderId: "257769221989",
+            appId: "1:257769221989:web:06b277661776f300693b8c",
+            measurementId: "G-RC029HSRM4"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        const db = firebase.firestore();
+        db.settings({ timestampsInSnapshots: true });
+        
+    </script>
+    <script src="app.js"></script>
+
+
+</body>
+
+</html>
